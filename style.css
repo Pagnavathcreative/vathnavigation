@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f6f9fc;
+  font-family: "Rubik", sans-serif;
+}
+header {
+  width: 100%;
+  height: 100vh;
+}
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #eee;
+}
+nav a {
+  text-decoration: none;
+  color: #6772e5;
+}
+.logo h1 {
+  font-size: 20px;
+  color: #6772e5;
+  text-transform: uppercase;
+}
+.menu {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  animation-name: animate-nav;
+  animation-duration: 0.2s;
+}
+@keyframes animate-nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu li {
+  padding: 0 1em;
+}
+.menu li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+}
+.menu li a:hover {
+  color: #899bb4;
+}
+.btn {
+  display: flex;
+  align-items: center;
+}
+.btn button {
+  width: 100px;
+  height: 30px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+#sign-in {
+  border: none;
+  background: none;
+  color: #6772e5;
+  font-size: 14px;
+}
+#sign-up {
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  background: #6772e5;
+  border-radius: 5px;
+}
+.line-1,
+.line-2,
+.line-3 {
+  width: 25px;
+  height: 0.1em;
+  background: #555;
+}
+.line-2 {
+  margin: 0.3em 0;
+}
+.rotate .line-1 {
+  transform: rotate(-45deg) translate(-5px, 3px);
+}
+.rotate .line-2 {
+  opacity: 0;
+}
+.rotate .line-3 {
+  transform: rotate(45deg) translate(-5px, -4px);
+}
+.bars {
+  cursor: pointer;
+  display: none;
+}
+.bars div {
+  transition: 0.2s;
+}
+@media (max-width: 750px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 1em;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f6f9fc;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: animate-menu;
+    animation-duration: 0.2s;
+    display: none;
+  }
+  @keyframes animate-menu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .menu li {
+    padding: 0;
+    margin: 2em 0;
+  }
+  .bars {
+    display: block;
+    z-index: 5;
+  }
+  .show-menu {
+    display: flex;
+  }
+  .block-on-scroll {
+    overflow: hidden;
+  }
+}
+@media (max-width: 400px) {
+  .btn button {
+    width: 80px;
+  }
+}
+.container {
+  width: 100%;
+  height: 90vh;
+  color: #899bb4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1em;
+}
+.container a {
+  color: #6772e5;
+}
